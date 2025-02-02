@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import basePath from "../../next.config";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
+const basePath = publicRuntimeConfig.basePath || '';
 
 export default function Home() {
   return (
